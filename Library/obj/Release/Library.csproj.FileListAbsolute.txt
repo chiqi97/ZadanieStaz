@@ -1,0 +1,6 @@
+C:\Users\User\source\repos\NoAIgnite\Library\bin\Release\Library.dll
+C:\Users\User\source\repos\NoAIgnite\Library\bin\Release\Library.pdb
+C:\Users\User\source\repos\NoAIgnite\Library\obj\Release\Library.csprojAssemblyReference.cache
+C:\Users\User\source\repos\NoAIgnite\Library\obj\Release\Library.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\NoAIgnite\Library\obj\Release\Library.dll
+C:\Users\User\source\repos\NoAIgnite\Library\obj\Release\Library.pdb
