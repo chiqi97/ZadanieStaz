@@ -11,47 +11,47 @@ namespace Library.Services
 
     {
 
-
+        
 
 
         public string CompareTwoDates(List<DateTime> input)
         {
-            if (input.Count != 2)
-            {
-                Console.WriteLine("Something went wrong.");
-                Environment.Exit(0);
-            }
 
             input = input.OrderBy(x => x).ToList();
 
-            string date = null;
-            if (input[0].Year == input[1].Year)
-            {
-                date = input[0].Year.ToString();
-            }
-            else
+
+            if (input[0].Year != input[1].Year)
             {
                 return PrintDates(ChangeAllDate(input[0]), ChangeAllDate(input[1]));
+                //date = input[0].Year.ToString();
             }
+            //else
+            //{
+            //    return PrintDates(ChangeAllDate(input[0]), ChangeAllDate(input[1]));
+            //}
 
-            if(input[0].Month == input[1].Month)
-            {
-                date = input[0].Month.ToString() + "." + date;
-            }
-            else
+            if(input[0].Month != input[1].Month)
             {
                 return PrintDates(ChangeToDayAndMonth(input[0]), ChangeAllDate(input[1]));
+                //date = input[0].Month.ToString() + "." + date;
             }
+            //else
+            //{
+            //    return PrintDates(ChangeToDayAndMonth(input[0]), ChangeAllDate(input[1]));
+            //}
 
-            if(input[0].Day == input[1].Day)
-            {
-                return PrintDates(ChangeAllDate(input[0]));
-            }
-            else
+            if(input[0].Day != input[1].Day)
             {
                 return PrintDates(ChangeToDay(input[0]), ChangeAllDate(input[1]));
+
             }
-            
+            //else
+            //{
+            //    return PrintDates(ChangeToDay(input[0]), ChangeAllDate(input[1]));
+            //}
+
+            return PrintDates(ChangeAllDate(input[0]));
+
         }
 
         private string ChangeToDay(DateTime inputDate)

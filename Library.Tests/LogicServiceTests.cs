@@ -15,6 +15,9 @@ namespace Library.Tests
         [InlineData(  new string[] { "01.01.2017", "05.01.2017" }, "01-05.01.2017" )]
         [InlineData(  new string[] { "01.01.2017", "05.02.2017" }, "01.01-05.02.2017" )]
         [InlineData(  new string[] { "01.01.2016", "05.01.2017" }, "01.01.2016-05.01.2017" )]
+        [InlineData(  new string[] { "01.05.2013", "05.01.2013" }, "05.01-01.05.2013" )]
+        [InlineData(  new string[] { "01.05.2013", "01.05.2013" }, "01.05.2013")]
+
         public void CompareTwoDates_MethodCompareDateAndWriteDatesRange(string[] inputArray, string expected)
         {
             List<DateTime> dateTimes = new List<DateTime>();

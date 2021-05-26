@@ -11,6 +11,8 @@ namespace Library.Services
     public class DataService : IDataService
     {
 
+        private readonly int _numberOfDates=2;
+
         public List<DateTime> GetTwoDates()
         {
             List<DateTime> dateTime = new List<DateTime>();
@@ -39,7 +41,7 @@ namespace Library.Services
         public bool Validate(List<string> tab)
         {
             List<DateTime> dateTime = new List<DateTime>();
-            if (tab==null || tab.Count != 2)
+            if (tab==null || tab.Count != _numberOfDates)
             {
                 Console.WriteLine("Invalid number of parameters.");
                 return false;
